@@ -1,6 +1,8 @@
-export function scaleX(point, scaleY) {
+export function scaleY(point, y) {
+	const isVector = y instanceof Object;
+
 	return {
 		x: point.x,
-		y: point.y * scaleY,
+		y: point.y * (isVector ? y.y : y),
 	};
 }

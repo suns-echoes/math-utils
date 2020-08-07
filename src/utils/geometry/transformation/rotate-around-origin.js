@@ -1,23 +1,41 @@
 import { ORIGIN_0x0 } from '../../constants/origin.js';
 
 
-export function rotateAroundOrigin(point, theta, origin = ORIGIN_0x0) {
+export function rotateAroundOrigin(point, theta, origin = ORIGIN_0x0, clockwise = true) {
 	const { x, y } = point;
-	const c = Math.cos(theta);
-	const s = Math.sin(theta);
+	const cos = Math.cos(theta);
+	const sin = Math.sin(theta);
 
 	if (origin === ORIGIN_0x0) {
-		return {
-			x: c * x - s * y,
-			y: s * x + c * y,
-		};
+		if (clockwise) {
+			return {
+				x: x * cos + y * sin,
+				y: -x * sin + y * cos,
+			};
+		}
+		else {
+			return {
+				x: x * cos - y * sin,
+				y: x * sin + y * cos,
+			};
+		}
 	}
 	else {
 		const { x: ox, y: oy } = origin;
+		const xo = x - ox;
+		const yo = y - oy;
 
-		return {
-			x: c * (x - ox) - s * (y - oy) + ox,
-			y: s * (x - ox) + c * (y - oy) + oy,
-		};
+		if (clockwise) {
+			return {
+				x: xo * cos + yo * sin + ox,
+				y: -xo * sin + yo * cos + oy,
+			};
+		}
+		else {
+			return {
+				x: xo * cos - yo * sin + ox,
+				y: xo * sin + yo * cos + oy,
+			};
+		}
 	}
 }

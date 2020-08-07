@@ -1,10 +1,18 @@
-export function rotate(point, theta) {
+export function rotate(point, theta, clockwise = true) {
 	const { x, y } = point;
-	const c = Math.cos(theta);
-	const s = Math.sin(theta);
+	const cos = Math.cos(theta);
+	const sin = Math.sin(theta);
 
-	return {
-		x: c * x - s * y,
-		y: s * x + c * y,
-	};
+	if (clockwise) {
+		return {
+			x: x * cos + y * sin,
+			y: -x * sin + y * cos,
+		};
+	}
+	else {
+		return {
+			x: x * cos - y * sin,
+			y: x * sin + y * cos,
+		};
+	}
 }
