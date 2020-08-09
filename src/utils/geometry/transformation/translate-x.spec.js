@@ -1,7 +1,7 @@
 import { translateX } from './translate-x.js';
 
 
-describe('Translate point', () => {
+describe('Translate point x coordinate', () => {
 	it('returns proper point cordinates', () => {
 		const p = translateX(
 			{ x: -3, y: 5.5 },

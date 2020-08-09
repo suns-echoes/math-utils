@@ -1,7 +1,7 @@
 import { distance } from './distance.js';
 
 
-describe('Distance', () => {
+describe('Calculate distance between two points', () => {
 	it('calculates distance for 0x0', () => {
 		const d = distance({ x: 0, y: 0 });
 

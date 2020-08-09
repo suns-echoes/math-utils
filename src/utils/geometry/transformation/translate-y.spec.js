@@ -1,7 +1,7 @@
 import { translateY } from './translate-y.js';
 
 
-describe('Translate point', () => {
+describe('Translate point y coordinate', () => {
 	it('returns proper point cordinates', () => {
 		const p = translateY(
 			{ x: -3, y: 5.5 },

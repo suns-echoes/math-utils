@@ -5,10 +5,12 @@ import { reflectX } from './transformation/reflect-x.js';
 import { reflectY } from './transformation/reflect-y.js';
 import { rotate } from './transformation/rotate.js';
 import { rotateAroundOrigin } from './transformation/rotate-around-origin.js';
-import { translate } from './transformation/translate.js';
 import { scale } from './transformation/scale.js';
 import { scaleX } from './transformation/scale-x.js';
 import { scaleY } from './transformation/scale-y.js';
+import { translate } from './transformation/translate.js';
+import { translateX } from './transformation/translate-x.js';
+import { translateY } from './transformation/translate-y.js';
 
 
 export const geometryTransformation = {
@@ -19,8 +21,10 @@ export const geometryTransformation = {
 	reflectY,
 	rotate,
 	rotateAroundOrigin,
-	translate,
 	scale,
 	scaleX,
 	scaleY,
+	translate,
+	translateX,
+	translateY,
 };

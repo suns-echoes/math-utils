@@ -1,7 +1,7 @@
 import { reflectY } from './reflect-y.js';
 
 
-describe('Reflect point', () => {
+describe('Reflect point over y axis', () => {
 	it('returns proper point cordinates', () => {
 		const p = reflectY(
 			{ x: -3, y: 5.5 }

@@ -1,7 +1,7 @@
 import { distanceFromOrigin } from './distance-from-origin.js';
 
 
-describe('Distance from otigin', () => {
+describe('Calculate distance from otigin', () => {
 	it('calculates distance of (0,0) from origin (0,0) (default)', () => {
 		const d = distanceFromOrigin({ x: 0, y: 0 });
 
