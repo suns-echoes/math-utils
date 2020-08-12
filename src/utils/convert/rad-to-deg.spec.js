@@ -20,6 +20,12 @@ describe('Convert radians to degrees', () => {
 		expect(theta).to.equal(90);
 	});
 
+	it('returns proper conversion for PI radians', () => {
+		const theta = radToDeg(Math.PI);
+
+		expect(theta).to.equal(180);
+	});
+
 	it('returns proper conversion for 4.31 radians', () => {
 		const theta = radToDeg(4.31);
 

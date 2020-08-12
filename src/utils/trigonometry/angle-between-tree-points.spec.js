@@ -1,5 +1,5 @@
 import { angleBetweenTreePoints } from './angle-between-tree-points.js';
-import { radToDeg } from '../conversion/rad-to-deg.js';
+import { radToDeg } from '../convert/rad-to-deg.js';
 
 
 describe('Angle between tree points', () => {

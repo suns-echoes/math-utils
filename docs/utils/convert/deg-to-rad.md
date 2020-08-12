@@ -8,7 +8,7 @@ Usage
 -----
 
 ```js
-const theta = MathUtils.convert.degToRad(degrees);
+const radians = MathUtils.convert.degToRad(degrees);
 ```
 
 
@@ -26,6 +26,5 @@ Examples
 --------
 
 ```js
-// default position is 0
-MathUtils.convert.degToRad('123456789', '+++') === '+++123456789';
+MathUtils.convert.radToDeg(180) === Math.PI;
 ```

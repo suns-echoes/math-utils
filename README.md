@@ -43,8 +43,8 @@ Tools
 
 Conversion functions
 --------------------
-* [degrees to radians](./docs/utils/conversion/deg-to-rad.md)
-* [radians to degrees](./docs/utils/conversion/rad-to-deg.md)
+* [degrees to radians](./docs/utils/convert/deg-to-rad.md)
+* [radians to degrees](./docs/utils/convert/rad-to-deg.md)
 
 
 Geometry functions
