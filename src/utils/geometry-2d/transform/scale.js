@@ -4,11 +4,13 @@ import { ORIGIN_0x0 } from '../../constants.js';
 
 
 /**
- * Scale point x and y coordinates.
+ * Method scales point x and y coordinates.
+ * @method scale
  * @param {Point} point - point to scale
- * @param {number} x - x coordinate sacle factor
- * @param {number} y - optional, y coordinate scale factor (def.: equal to "x")
- * @param {Point} - optional, scale origin (def.: (0,0))
+ * @param {number} x - x coordinate scale factor
+ * @param {number} [y] - y coordinate scale factor (def.: equal to "x")
+ * @param {Point} [origin] - scale origin (def.: (0,0))
+ * @return {Point} - point with scaled coordinates
  */
 export function scale(point, x, y = x, origin = ORIGIN_0x0) {
 	if (!isPoint(point)) {

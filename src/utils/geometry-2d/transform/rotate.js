@@ -4,12 +4,12 @@ import { ORIGIN_0x0 } from '../../constants.js';
 
 
 /**
- * Rotate point around origin.
+ * Method rotates point around origin point.
  * @method rotate
  * @param {Point} point - point to rotate
  * @param {number} theta - rotation angle in radians
- * @param {Point} origin - rotation origin
- * @param {boolean} clockwise - rotate clockwise
+ * @param {Point} [origin] - rotation origin (def.: (0,0))
+ * @param {boolean} [clockwise] - rotate clockwise
  * @return {Point} - rotated point
  */
 export function rotate(point, theta, origin = ORIGIN_0x0, clockwise = true) {

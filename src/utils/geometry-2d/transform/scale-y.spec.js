@@ -1,34 +1,19 @@
 import { scaleY } from './scale-y.js';
-import { expect } from 'chai';
 
 
-describe('Scale point (y coordinate)', () => {
-	it('returns point scaled by number', () => {
-		const p = scaleY({ x: -3, y: 5.5 }, 2);
+describe('Scale point y coordinate', () => {
+	it('returns point with scaled coordinates', () => {
+		const p = scaleY({ x: -3, y: 5.5 }, 3);
 
 		expect(p.x).to.equal(-3);
-		expect(p.y).to.equal(11);
+		expect(p.y).to.equal(16.5);
 	});
 
-	it('returns point scaled by vector', () => {
-		const p = scaleY({ x: -3, y: 5.5 }, { x: 4, y: 2 });
+	it('returns point with scaled coordinates (origin)', () => {
+		const p = scaleY({ x: -3, y: 5.5 }, 4, { x: 1, y: 2 });
 
 		expect(p.x).to.equal(-3);
-		expect(p.y).to.equal(11);
-	});
-
-	it('returns point scaled by number (origin)', () => {
-		const p = scaleY({ x: -3, y: 5.5 }, 2, { x: 1, y: 2 });
-
-		expect(p.x).to.equal(-3);
-		expect(p.y).to.equal(9);
-	});
-
-	it('returns point scaled by vector (origin)', () => {
-		const p = scaleY({ x: -3, y: 5.5 }, { x: 4, y: 2 }, { x: 1, y: 2 });
-
-		expect(p.x).to.equal(-3);
-		expect(p.y).to.equal(9);
+		expect(p.y).to.equal(16);
 	});
 
 	it('throws if "point" has invalid type', () => {

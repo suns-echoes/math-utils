@@ -1,24 +1,23 @@
 import { isPoint } from '../../check/is-point.js';
-import { isVector } from '../../check/is-vector.js';
 
 import { ORIGIN_0x0 } from '../../constants.js';
 
 
 /**
- * Scale point y coordinate.
+ * Method scales point y coordinate.
+ * @method scaleY
  * @param {Point} point - point to scale
- * @param {number} y - scale y coordinate
- * @param {Point} - optional, scale origin (def.: (0,0))
+ * @param {number} y - y coordinate scale factor
+ * @param {Point} [origin] - scale origin (def.: (0,0))
+ * @return {Point} - point with scaled coordinate
  */
 export function scaleY(point, y, origin = ORIGIN_0x0) {
-	const useVector = isVector(y);
-
 	if (!isPoint(point)) {
 		throw new TypeError('"point" is not type of Point');
 	}
 
-	if (!useVector && typeof y !== 'number') {
-		throw new TypeError('"y" is not type of number nor Vector');
+	if (typeof y !== 'number') {
+		throw new TypeError('"y" is not type of number');
 	}
 
 	if (origin !== undefined && !isPoint(origin)) {
@@ -28,7 +27,7 @@ export function scaleY(point, y, origin = ORIGIN_0x0) {
 	if (origin === ORIGIN_0x0) {
 		return {
 			x: point.x,
-			y: point.y * (useVector ? y.y : y),
+			y: point.y * y,
 		};
 	}
 	else {
@@ -36,7 +35,7 @@ export function scaleY(point, y, origin = ORIGIN_0x0) {
 
 		return {
 			x: point.x,
-			y: (point.y - oy) * (useVector ? y.y : y) + oy,
+			y: (point.y - oy) * y + oy,
 		};
 	}
 }

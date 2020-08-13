@@ -3,28 +3,28 @@ import { expect } from 'chai';
 
 
 describe('Scale point', () => {
-	it('returns point scaled by single number', () => {
+	it('returns point with scaled coordinates (default y)', () => {
 		const p = scale({ x: -3, y: 5.5 }, 3);
 
 		expect(p.x).to.equal(-9);
 		expect(p.y).to.equal(16.5);
 	});
 
-	it('returns point scaled by number', () => {
+	it('returns point with scaled coordinates', () => {
 		const p = scale({ x: -3, y: 5.5 }, 4, 2);
 
 		expect(p.x).to.equal(-12);
 		expect(p.y).to.equal(11);
 	});
 
-	it('returns point scaled by single number (origin)', () => {
+	it('returns point with scaled coordinates (default y, origin)', () => {
 		const p = scale({ x: -3, y: 5.5 }, 3, undefined, { x: 1, y: 2 });
 
 		expect(p.x).to.equal(-11);
 		expect(p.y).to.equal(12.5);
 	});
 
-	it('returns point scaled by number (origin)', () => {
+	it('returns point with scaled coordinates (origin)', () => {
 		const p = scale({ x: -3, y: 5.5 }, 4, 2, { x: 1, y: 2 });
 
 		expect(p.x).to.equal(-15);

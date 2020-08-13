@@ -8,37 +8,31 @@ Usage
 -----
 
 ```js
-const newPoint = MathUtils.geometry.transform.scale(point, x);
-
-const newPoint = MathUtils.geometry.transform.scale(point, x, y);
-
-const newPoint = MathUtils.geometry.transform.scale(point, x, y, origin);
-
-const newPoint = MathUtils.geometry.transform.scale(point, x, origin);
-
-const newPoint = MathUtils.geometry.transform.scale(point, x, undefined, origin);
-
-const newPoint = MathUtils.geometry.transform.scale(point, vector);
-
-const newPoint = MathUtils.geometry.transform.scale(point, vector, origin);
-
-const newPoint = MathUtils.geometry.transform.scale(point, vector, undefined, origin);
+const newPoint = MathUtils.geometry.transform.scale(point, x[, y, origin]);
 ```
 
 
 ### Arguments
 
-* `<number>` `radians` - angle in radians.
+* `<Point>` `point` - point to scale
+* `<number>` `x` - x coordinate scale factor
+* `<number>` `y` - optional, y coordinate scale factor (def.: equal to "x")
+* `<Point>` `origin` - optional, scale origin (def.: (0,0))
 
 
 ### Returns
 
-* `<number>` - angle in degrees.
+* `<Point>` - point with scaled coordinates
 
 
 Examples
 --------
 
 ```js
-MathUtils.convert.radToDeg(Math.PI) === 180;
+// Multiply point x and y coordinates by 2.
+MathUtils.geometry.transform.scale(point, 2);
+MathUtils.geometry.transform.scale(point, 2, 2);
+
+// Scale coordinates from origin
+MathUtils.geometry.transform.scale(point, 2, 3, { x: 1, y: -2 });
 ```

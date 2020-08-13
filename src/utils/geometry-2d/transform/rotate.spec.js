@@ -4,7 +4,7 @@ import { rotate } from './rotate.js';
 
 
 describe('Rotate point around origin', () => {
-	it('returns rotated point cordinates (default origin)', () => {
+	it('returns rotated point (default origin)', () => {
 		const p = rotate(
 			{ x: 3, y: 5 },
 			degToRad(90)
@@ -14,7 +14,7 @@ describe('Rotate point around origin', () => {
 		expect(fixFloat(p.y)).to.equal(-3);
 	});
 
-	it('returns rotated point cordinates (default origin, counter clockwise)', () => {
+	it('returns rotated point (default origin, counter clockwise)', () => {
 		const p = rotate(
 			{ x: 3, y: 5 },
 			degToRad(90),
@@ -26,7 +26,7 @@ describe('Rotate point around origin', () => {
 		expect(fixFloat(p.y)).to.equal(3);
 	});
 
-	it('returns rotated point cordinates (custom origin)', () => {
+	it('returns rotated point (custom origin)', () => {
 		const p = rotate(
 			{ x: 3, y: 5 },
 			degToRad(90),
@@ -37,7 +37,7 @@ describe('Rotate point around origin', () => {
 		expect(fixFloat(p.y)).to.equal(0);
 	});
 
-	it('returns rotated point cordinates (custom origin, counter clockwise)', () => {
+	it('returns rotated point (custom origin, counter clockwise)', () => {
 		const p = rotate(
 			{ x: 3, y: 5 },
 			degToRad(90),
