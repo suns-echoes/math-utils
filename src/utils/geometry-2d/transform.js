@@ -9,6 +9,8 @@ import { scaleY } from './transform/scale-y.js';
 import { translate } from './transform/translate.js';
 import { translateX } from './transform/translate-x.js';
 import { translateY } from './transform/translate-y.js';
+import { vscale } from './transform/vscale.js';
+import { vtranslate } from './transform/vtranslate.js';
 
 
 export const transform = {
@@ -23,10 +25,10 @@ export const transform = {
 	translate,
 	translateX,
 	translateY,
-	// vscale,
+	vscale,
 	// vscaleX,
 	// vscaleY,
-	// vtranslate,
+	vtranslate,
 	// vtranslateX,
 	// vtranslateY,
 };

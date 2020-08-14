@@ -14,19 +14,19 @@ import { ORIGIN_0x0 } from '../../constants.js';
  */
 export function rotate(point, theta, origin = ORIGIN_0x0, clockwise = true) {
 	if (!isPoint(point)) {
-		throw new TypeError('"point" is not type of Point');
+		throw new TypeError('"point" is not a Point');
 	}
 
 	if (typeof theta !== 'number') {
-		throw new TypeError('"theta" is not type of number');
+		throw new TypeError('"theta" is not a number');
 	}
 
 	if (origin !== undefined && !isPoint(origin)) {
-		throw new TypeError('"origin" is not type of Point');
+		throw new TypeError('"origin" is not a Point');
 	}
 
 	if (typeof clockwise !== 'boolean') {
-		throw new TypeError('"clockwise" is not type of boolean');
+		throw new TypeError('"clockwise" is not a boolean');
 	}
 
 	const { x, y } = point;

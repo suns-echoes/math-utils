@@ -6,7 +6,7 @@
  */
 export function radToDeg(radians) {
 	if (typeof radians !== 'number') {
-		throw new TypeError('argument "radians" is not type of number');
+		throw new TypeError('"radians" is not a number');
 	}
 
 	return radians * 180 / Math.PI;

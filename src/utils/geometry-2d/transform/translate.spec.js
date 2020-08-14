@@ -9,17 +9,19 @@ describe('Translate point', () => {
 		expect(p.y).to.equal(-2);
 	});
 
-	it('returns translated point (default x)', () => {
-		const p = translate({ x: -3, y: 5.5 }, undefined, -7.5);
+	it('throws if "x" is invalid', () => {
+		function fail() {
+			translate({ x: -3, y: 5.5 }, null, -7.5);
+		}
 
-		expect(p.x).to.equal(-3);
-		expect(p.y).to.equal(-2);
+		expect(fail).to.throw(TypeError);
 	});
 
-	it('returns translated point (default y)', () => {
-		const p = translate({ x: -3, y: 5.5 }, 5);
+	it('throws if "y" is invalid', () => {
+		function fail() {
+			const p = translate({ x: -3, y: 5.5 }, 5, null);
+		}
 
-		expect(p.x).to.equal(2);
-		expect(p.y).to.equal(5.5);
+		expect(fail).to.throw(TypeError);
 	});
 });

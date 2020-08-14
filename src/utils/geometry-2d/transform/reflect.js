@@ -5,11 +5,11 @@ import { ORIGIN_0x0 } from '../../constants.js';
 
 export function reflect(point, origin = ORIGIN_0x0) {
 	if (!isPoint(point)) {
-		throw new TypeError('"point" is not type of Point');
+		throw new TypeError('"point" is not a Point');
 	}
 
 	if (origin !== undefined && !isPoint(origin)) {
-		throw new TypeError('"origin" is not type of Point');
+		throw new TypeError('"origin" is not a Point');
 	}
 
 	if (origin === ORIGIN_0x0) {

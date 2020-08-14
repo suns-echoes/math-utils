@@ -6,7 +6,7 @@
  */
 export function degToRad(degrees) {
 	if (typeof degrees !== 'number') {
-		throw new TypeError('argument "degrees" is not type of number');
+		throw new TypeError('"degrees" is not a number');
 	}
 
 	return Math.PI / 180 * degrees;

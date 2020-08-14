@@ -1,6 +1,8 @@
 Geometry / Transform / ScaleY
 =============================
 
+### `scale-y`
+
 Method scales point y coordinate.
 
 
@@ -14,14 +16,14 @@ const newPoint = MathUtils.geometry.transform.scaleY(point, y[, origin]);
 
 ### Arguments
 
-* `<Point>` `point` - point to scale
-* `<number>` `y` - y coordinate scale factor
-* `<Point>` `origin` - optional, scale origin (def.: (0,0))
+* **`point`**: *`Point`* - point to scale
+* **`y`**: *`number`* - y coordinate scale factor
+* **`origin`**?: *`Point`* - scale origin (def.: (0,0))
 
 
 ### Returns
 
-* `<Point>` - point with scaled coordinate
+* *`Point`* - point with scaled coordinate
 
 
 Examples
@@ -29,8 +31,8 @@ Examples
 
 ```js
 // Multiply point y coordinate by 2.
-MathUtils.geometry.transform.scaleY(point, 2);
+const newPoint = MathUtils.geometry.transform.scaleY(point, 2);
 
 // Scale coordinate from origin
-MathUtils.geometry.transform.scaleY(point, 2, { x: 1, y: -2 });
+const newPoint = MathUtils.geometry.transform.scaleY(point, 2, { x: 1, y: -2 });
 ```

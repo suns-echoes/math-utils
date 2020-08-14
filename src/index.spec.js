@@ -7,37 +7,40 @@ import MathUtils from './index.js';
 const readdir = promisify(fs.readdir);
 
 
-async function findMethods() {
+const modulesPath = './utils';
+
+
+async function findEntries() {
 	const entities = await readdir('./src/utils');
 	const matchNonSpecFiles = /^((?!\.spec\.js).)*\.js$/;
-	const methods = [];
+	const entries = [];
 
 	for (const entity of entities) {
 		if (matchNonSpecFiles.test(entity)) {
-			const path = `./utils/${entity}`;
+			const path = `${modulesPath}/${entity}`;
 			const module = await import(path);
 			const keys = Object.keys(module);
 
 			keys.forEach((key) => {
-				if (typeof module[key] === 'function') {
-					methods.push(key);
+				if (typeof module[key] !== undefined) {
+					entries.push(key);
 				}
 				else if (key !== 'default') {
-					throw new Error(`"${entity}" module exports entity "${key}" that is not a function`);
+					throw new Error(`"${entity}" module exports entity "${key}" that is undefined`);
 				}
 			});
 		}
 	}
 
-	return methods;
+	return entries;
 }
 
 
 describe('MathUtils', () => {
-	it('has default export for all existing methods', async () => {
-		const exportedMethods = Object.keys(MathUtils);
-		const foundMethods = await findMethods();
+	it('has default export for all existing entries', async () => {
+		const exportedEntries = Object.keys(MathUtils);
+		const foundEntries = await findEntries();
 
-		expect(exportedMethods).to.be.eql(foundMethods);
+		expect(exportedEntries).to.be.eql(foundEntries);
 	});
 });

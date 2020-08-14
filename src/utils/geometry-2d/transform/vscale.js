@@ -5,22 +5,24 @@ import { ORIGIN_0x0 } from '../../constants.js';
 
 
 /**
- * Scale point x and y coordinates by vector.
+ * Method scales point x and y coordinates by vector.
+ * @method vscale
  * @param {Point} point - point to scale
  * @param {Vector} vector - vector coordinates scale factor
- * @param {Point} - optional, scale origin (def.: (0,0))
+ * @param {Point} [origin] - scale origin (def.: (0,0))
+ * @return {Point} - point with scaled coordinates
  */
 export function vscale(point, vector, origin = ORIGIN_0x0) {
 	if (!isPoint(point)) {
-		throw new TypeError('"point" is not type of Point');
+		throw new TypeError('"point" is not a Point');
 	}
 
 	if (!isVector(vector)) {
-		throw new TypeError('"vector" is not type of Vector');
+		throw new TypeError('"vector" is not a Vector');
 	}
 
 	if (origin !== undefined && !isPoint(origin)) {
-		throw new TypeError('"origin" is not type of Point');
+		throw new TypeError('"origin" is not a Point');
 	}
 
 	if (origin === ORIGIN_0x0) {

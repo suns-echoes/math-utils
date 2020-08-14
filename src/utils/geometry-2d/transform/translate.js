@@ -5,21 +5,21 @@ import { isPoint } from '../../check/is-point.js';
  * Method translate point coordinates.
  * @method translate
  * @param {Point} point - point to translate
- * @param {number} [x] - x axis translation (def.: 0)
- * @param {number} [y] - y axis translation (def.: 0)
+ * @param {number} x - x axis translation
+ * @param {number} y - y axis translation
  * @return {Point} - translated point
  */
-export function translate(point, x = 0, y = 0) {
+export function translate(point, x, y) {
 	if (!isPoint(point)) {
-		throw new TypeError('"point" is not type of Point');
+		throw new TypeError('"point" is not a Point');
 	}
 
-	if (y !== undefined && typeof x !== 'number') {
-		throw new TypeError('"x" is not type of number');
+	if (typeof x !== 'number') {
+		throw new TypeError('"x" is not a number');
 	}
 
-	if (y !== undefined && typeof y !== 'number') {
-		throw new TypeError('"y" is not type of number');
+	if (typeof y !== 'number') {
+		throw new TypeError('"y" is not a number');
 	}
 
 	return {
