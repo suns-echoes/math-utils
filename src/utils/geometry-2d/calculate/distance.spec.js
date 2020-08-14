@@ -49,4 +49,20 @@ describe('Calculate distance between two points', () => {
 
 		expect(d).to.equal(16.278820596099706);
 	});
+
+	it('throws if "point" has invalid type', () => {
+		function fail() {
+			distance(null);
+		}
+
+		expect(fail).to.throw(TypeError);
+	});
+
+	it('throws if "origin" has invalid type', () => {
+		function fail() {
+			distance({ x: 1, y: 2 }, null);
+		}
+
+		expect(fail).to.throw(TypeError);
+	});
 });

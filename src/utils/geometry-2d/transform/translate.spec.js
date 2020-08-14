@@ -9,6 +9,14 @@ describe('Translate point', () => {
 		expect(p.y).to.equal(-2);
 	});
 
+	it('throws if "point" has invalid type', () => {
+		function fail() {
+			translate(null, 1, 1);
+		}
+
+		expect(fail).to.throw(TypeError);
+	});
+
 	it('throws if "x" is invalid', () => {
 		function fail() {
 			translate({ x: -3, y: 5.5 }, null, -7.5);

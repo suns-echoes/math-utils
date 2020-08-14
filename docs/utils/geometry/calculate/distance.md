@@ -10,25 +10,28 @@ Usage
 -----
 
 ```js
-const sagittaHeight = MathUtils.geometry.calculate.asagitta(radius, theta);
+const l = MathUtils.geometry.calculate.distance(point[, origin]);
 ```
 
 
 ### Arguments
 
-* **`radius`**: *`number`* - circle radius
-* **`theta`**: *`number`* - circle segment angle in radians
+* **`point`**: *`Point`* - point
+* **`origin`**?: *`Point`* - origin point (def.: (0,0))
 
 
 ### Returns
 
-* *`number`* - sagitta height
+* *`number`* - distance between point and origin
 
 
 Examples
 --------
 
 ```js
-// Calculate sagitta for circle radius 4 and segment angle 2.12 rad.
-const sagittaHeight = MathUtils.geometry.calculate.sagitta(4, 2.12);
+// Calculate point distance from the origin of the coordinate system.
+const l = MathUtils.geometry.calculate.distance(point);
+
+// Calculate point distance from another point (custom origin).
+const l = MathUtils.geometry.calculate.distance(point, { x: 4, y: 6 });
 ```
