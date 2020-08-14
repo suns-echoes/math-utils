@@ -1,14 +1,14 @@
 const fs = require('fs');
 const { promisify } = require('util');
 
-import MathUtils from './index.js';
+import { convert } from './convert.js';
 
 
 const readdir = promisify(fs.readdir);
 
 
-const importPath = 'utils';
-const dirPath = 'utils';
+const importPath = 'convert';
+const dirPath = 'utils/convert';
 
 
 async function findEntries() {
@@ -37,9 +37,9 @@ async function findEntries() {
 }
 
 
-describe('MathUtils', () => {
-	it('has default export for all existing entries', async () => {
-		const exportedEntries = Object.keys(MathUtils);
+describe('MathUtils.convert', () => {
+	it('has named export for all existing entries', async () => {
+		const exportedEntries = Object.keys(convert);
 		const foundEntries = await findEntries();
 
 		expect(exportedEntries).to.be.eql(foundEntries);

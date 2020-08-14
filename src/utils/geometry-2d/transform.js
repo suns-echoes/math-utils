@@ -10,25 +10,29 @@ import { translate } from './transform/translate.js';
 import { translateX } from './transform/translate-x.js';
 import { translateY } from './transform/translate-y.js';
 import { vscale } from './transform/vscale.js';
+import { vscaleX } from './transform/vscale-x.js';
+import { vscaleY } from './transform/vscale-y.js';
 import { vtranslate } from './transform/vtranslate.js';
+import { vtranslateX } from './transform/vtranslate-x.js';
+import { vtranslateY } from './transform/vtranslate-y.js';
 
 
 export const transform = {
-	reflect,
 	reflectOverLine,
 	reflectX,
 	reflectY,
+	reflect,
 	rotate,
-	scale,
 	scaleX,
 	scaleY,
-	translate,
+	scale,
 	translateX,
 	translateY,
+	translate,
+	vscaleX,
+	vscaleY,
 	vscale,
-	// vscaleX,
-	// vscaleY,
+	vtranslateX,
+	vtranslateY,
 	vtranslate,
-	// vtranslateX,
-	// vtranslateY,
 };

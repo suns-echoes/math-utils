@@ -1,7 +1,9 @@
 Degrees to radians
 ==================
 
-Method converts angle in degrees into radians.
+### `degToRad`
+
+Method converts angle in degrees to radians.
 
 
 Usage
@@ -14,12 +16,12 @@ const radians = MathUtils.convert.degToRad(degrees);
 
 ### Arguments
 
-* `<number>` `degrees` - angle in degrees.
+* **`degrees`**: *`number`* - angle in degrees.
 
 
 ### Returns
 
-* `<number>` - angle in radians.
+* *`number`* - angle in radians.
 
 
 Examples

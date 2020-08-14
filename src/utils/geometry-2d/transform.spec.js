@@ -1,14 +1,14 @@
 const fs = require('fs');
 const { promisify } = require('util');
 
-import MathUtils from './index.js';
+import { transform } from './transform.js';
 
 
 const readdir = promisify(fs.readdir);
 
 
-const importPath = 'utils';
-const dirPath = 'utils';
+const importPath = 'transform';
+const dirPath = 'utils/geometry-2d/transform';
 
 
 async function findEntries() {
@@ -37,9 +37,9 @@ async function findEntries() {
 }
 
 
-describe('MathUtils', () => {
-	it('has default export for all existing entries', async () => {
-		const exportedEntries = Object.keys(MathUtils);
+describe('MathUtils.transform', () => {
+	it('has named export for all existing entries', async () => {
+		const exportedEntries = Object.keys(transform);
 		const foundEntries = await findEntries();
 
 		expect(exportedEntries).to.be.eql(foundEntries);

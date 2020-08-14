@@ -1,14 +1,14 @@
 const fs = require('fs');
 const { promisify } = require('util');
 
-import MathUtils from './index.js';
+import { tools } from './tools.js';
 
 
 const readdir = promisify(fs.readdir);
 
 
-const importPath = 'utils';
-const dirPath = 'utils';
+const importPath = 'tools';
+const dirPath = 'utils/tools';
 
 
 async function findEntries() {
@@ -37,9 +37,9 @@ async function findEntries() {
 }
 
 
-describe('MathUtils', () => {
-	it('has default export for all existing entries', async () => {
-		const exportedEntries = Object.keys(MathUtils);
+describe('MathUtils.tools', () => {
+	it('has named export for all existing entries', async () => {
+		const exportedEntries = Object.keys(tools);
 		const foundEntries = await findEntries();
 
 		expect(exportedEntries).to.be.eql(foundEntries);

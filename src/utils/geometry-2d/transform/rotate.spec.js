@@ -48,4 +48,36 @@ describe('Rotate point around origin', () => {
 		expect(p.x).to.equal(-2);
 		expect(fixFloat(p.y)).to.equal(4);
 	});
+
+	it('throws if "point" has invalid type', () => {
+		const fail = () => {
+			rotate(null, 3.14);
+		};
+
+		expect(fail).to.throw(TypeError);
+	});
+
+	it('throws if "theta" has invalid type', () => {
+		const fail = () => {
+			rotate({ x: 3, y: 5 }, null);
+		};
+
+		expect(fail).to.throw(TypeError);
+	});
+
+	it('throws if "origin" has invalid type', () => {
+		const fail = () => {
+			rotate({ x: 3, y: 5 }, 3.14, null);
+		};
+
+		expect(fail).to.throw(TypeError);
+	});
+
+	it('throws if "origin" has invalid type', () => {
+		const fail = () => {
+			rotate({ x: 3, y: 5 }, 3.14, { x: 1, y: 2 }, null);
+		};
+
+		expect(fail).to.throw(TypeError);
+	});
 });

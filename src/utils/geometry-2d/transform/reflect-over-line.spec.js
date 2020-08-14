@@ -58,4 +58,36 @@ describe('Reflect point over the line defined by two points', () => {
 		expect(x).to.equal(2);
 		expect(y).to.equal(2);
 	});
+
+	it('throws if "point" has invalid type', () => {
+		const fail = () => {
+			reflectOverLine(null, { x: -1, y: -1 }, { x: 1, y: 1 });
+		};
+
+		expect(fail).to.throw(TypeError);
+	});
+
+	it('throws if "linePointA" has invalid type', () => {
+		const fail = () => {
+			reflectOverLine({ x: 2, y: 2 }, null, { x: 1, y: 1 });
+		};
+
+		expect(fail).to.throw(TypeError);
+	});
+
+	it('throws if "linePointB" has invalid type', () => {
+		const fail = () => {
+			reflectOverLine({ x: 2, y: 2 }, { x: -1, y: -1 }, null);
+		};
+
+		expect(fail).to.throw(TypeError);
+	});
+
+	it('throws if "linePointA" has the same coordinates as "linePointB"', () => {
+		const fail = () => {
+			reflectOverLine({ x: 2, y: 2 }, { x: -1, y: -1 }, { x: -1, y: -1 });
+		};
+
+		expect(fail).to.throw(Error);
+	});
 });

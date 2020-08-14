@@ -7,17 +7,18 @@ import { MathUtils } from './math-utils.js';
 const readdir = promisify(fs.readdir);
 
 
-const modulesPath = './utils';
+const importPath = 'utils';
+const dirPath = 'utils';
 
 
 async function findEntries() {
-	const entities = await readdir('./src/utils');
+	const entities = await readdir(`./src/${dirPath}/`);
 	const matchNonSpecFiles = /^((?!\.spec\.js).)*\.js$/;
 	const entries = [];
 
 	for (const entity of entities) {
 		if (matchNonSpecFiles.test(entity)) {
-			const path = `${modulesPath}/${entity}`;
+			const path = `./${importPath}/${entity}`;
 			const module = await import(path);
 			const keys = Object.keys(module);
 

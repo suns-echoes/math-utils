@@ -5,19 +5,20 @@ Tools / Fix float
 
 Method fixes float precision error.
 
+*Note: to change precision use [setFixFloatPrecision](./set-fix-float-precision.md) method.*
+
 
 Usage
 -----
 
 ```js
-const fixedNumber = MathUtils.tools.fixFloat(number[, precision]);
+const fixedNumber = MathUtils.tools.fixFloat(number);
 ```
 
 
 ### Arguments
 
 * **`number`**: *`number`* - number to fix
-* **`precision`**?: *`number`* - decimal places, 14 is max
 
 
 ### Returns
@@ -29,9 +30,6 @@ Examples
 --------
 
 ```js
-// Fix number precision error with default precision.
-const l = MathUtils.tools.fixFloat(number);
-
-// Use custom precision.
-const l = MathUtils.tools.fixFloat(number, 4);
+// Fix number precision error.
+const fixedNumber = MathUtils.tools.fixFloat(number);
 ```

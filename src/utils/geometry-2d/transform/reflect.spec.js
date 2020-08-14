@@ -45,4 +45,20 @@ describe('Reflect point', () => {
 		expect(x).to.equal(-50);
 		expect(y).to.equal(-50);
 	});
+
+	it('throws if "point" has invalid type', () => {
+		const fail = () => {
+			reflect(null);
+		};
+
+		expect(fail).to.throw(TypeError);
+	});
+
+	it('throws if "origin" has invalid type', () => {
+		const fail = () => {
+			reflect({ x: 10, y: 10 }, null);
+		};
+
+		expect(fail).to.throw(TypeError);
+	});
 });

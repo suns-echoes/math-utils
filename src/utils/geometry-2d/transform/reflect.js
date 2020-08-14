@@ -3,6 +3,11 @@ import { isPoint } from '../../check/is-point.js';
 import { ORIGIN_0x0 } from '../../constants.js';
 
 
+/**
+ *
+ * @param {*} point
+ * @param {*} origin
+ */
 export function reflect(point, origin = ORIGIN_0x0) {
 	if (!isPoint(point)) {
 		throw new TypeError('"point" is not a Point');

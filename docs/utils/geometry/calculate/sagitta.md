@@ -1,5 +1,3 @@
-* **`length`**: *`number`* - width of circle segment
-
 Geometry / Calculate / Sagitta
 ==============================
 
