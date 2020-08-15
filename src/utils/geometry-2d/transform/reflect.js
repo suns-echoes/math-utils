@@ -4,9 +4,11 @@ import { ORIGIN_0x0 } from '../../constants.js';
 
 
 /**
- *
- * @param {*} point
- * @param {*} origin
+ * Method reflects point over origin point.
+ * @method reflect
+ * @param {Point} point - point to reflect
+ * @param {Point} origin - reflection origin
+ * @return {Point} - reflected point
  */
 export function reflect(point, origin = ORIGIN_0x0) {
 	if (!isPoint(point)) {
