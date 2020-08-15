@@ -1,4 +1,4 @@
-import { FIX_FLOAT } from './fix-float.config.js';
+import { FIX_FLOAT } from '../constants.js';
 
 
 /**

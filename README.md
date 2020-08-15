@@ -36,9 +36,11 @@ Constants
 * [origin (0,0)](./docs/utils/constants/origin.md)
 
 
-Tools
+Check
 -----
-* [fix float (precision/rounding)](./docs/utils/tools/fix-float.md)
+* [is point](./docs/utils/check/is-point.md)
+* [is vector](./docs/utils/check/is-vector.md)
+* [point equal point](./docs/utils/check/point-equal-point.md)
 
 
 Conversion functions
@@ -53,14 +55,13 @@ Geometry functions
 1. Calculation
 
 * [distance](./docs/utils/geometry/calculation/distance.md)
-* [distance from origin](./docs/utils/geometry/calculation/distance-from-origin.md)
 * [sagitta](./docs/utils/geometry/calculation/sagitta.md)
+* [sagitta from angle](./docs/utils/geometry/calculation/sagitta-from-angle.md)
 
 2. Transformation
 
 * [reflect](./docs/utils/geometry/transformation/reflect.md)
 * [reflect over line](./docs/utils/geometry/transformation/reflect-over-line.md)
-* [reflect over origin](./docs/utils/geometry/transformation/reflect-over-origin.md)
 * [reflect x](./docs/utils/geometry/transformation/reflect-x.md)
 * [reflect y](./docs/utils/geometry/transformation/reflect-y.md)
 * [rotate](./docs/utils/geometry/transformation/rotate.md)
@@ -76,7 +77,16 @@ Trigonometry functions
 ----------------------
 
 * [angle between tree points](./docs/utils/trigonometry/angle-between-tree-points.md)
+* [cos](./docs/utils/trigonometry/cos.md)
+* [sin](./docs/utils/trigonometry/sin.md)
+* [tan](./docs/utils/trigonometry/tan.md)
 * [versin](./docs/utils/trigonometry/versin.md)
+
+
+Tools
+-----
+* [fix float (precision/rounding)](./docs/utils/tools/fix-float.md)
+* [set fix float precision](./docs/utils/tools/set-fix-float-precision.md)
 
 
 License

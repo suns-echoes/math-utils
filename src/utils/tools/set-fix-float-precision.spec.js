@@ -1,7 +1,7 @@
 import { fixFloat } from './fix-float.js';
 import { setFixFloatPrecision } from './set-fix-float-precision.js';
 
-import { FIX_FLOAT } from './fix-float.config.js';
+import { FIX_FLOAT } from '../constants.js';
 
 
 describe('Set fix float precision', () => {
