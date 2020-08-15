@@ -3,22 +3,21 @@ Geometry / Transform / Translate
 
 ### `translate`
 
-Method translate point coordinates.
+Method translates point coordinates by vector.
 
 
 Usage
 -----
 
 ```js
-const newPoint = MathUtils.geometry.transform.translate(point[, x, y]);
+const newPoint = MathUtils.geometry.transform.translate(point, vector);
 ```
 
 
 ### Arguments
 
 * **`point`**: *`Point`* - point to translate
-* **`x`**: *`number`* - x axis translation
-* **`y`**: *`number`* - y axis translation
+* **`vector`**: *`Vector`* - translation vector
 
 
 ### Returns
@@ -30,12 +29,6 @@ Examples
 --------
 
 ```js
-// Translate point x by 2 and y by 3.
-const newPoint = MathUtils.geometry.transform.translate(point, 2, 3);
-
-// Translate point x by 2.
-const newPoint = MathUtils.geometry.transform.translate(point, 2);
-
-// Translate point y by 3.
-const newPoint = MathUtils.geometry.transform.translate(point, undefined, 2);
+// Translate point by (2,3) vector.
+const newPoint = MathUtils.geometry.transform.translate(point, { x: 2, y: 3 });
 ```

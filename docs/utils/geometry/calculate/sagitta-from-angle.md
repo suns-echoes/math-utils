@@ -1,7 +1,7 @@
-Geometry / Calculate / Sagitta (from angle)
-===========================================
+Geometry / Calculate / Sagitta from angle
+=========================================
 
-### `asagitta`
+### `sagittaFromAngle`
 
 Method calculates sagitta from radius and angle.
 
@@ -10,7 +10,7 @@ Usage
 -----
 
 ```js
-const sagittaHeight = MathUtils.geometry.calculate.asagitta(radius, theta);
+const sagittaHeight = MathUtils.geometry.calculate.sagittaFromAngle(radius, theta);
 ```
 
 
@@ -30,5 +30,5 @@ Examples
 
 ```js
 // Calculate sagitta for circle radius 4 and segment angle 2.12 rad.
-const sagittaHeight = MathUtils.geometry.calculate.sagitta(4, 2.12);
+const sagittaHeight = MathUtils.geometry.calculate.sagittaFromAngle(4, 2.12);
 ```

@@ -10,15 +10,14 @@ Usage
 -----
 
 ```js
-const newPoint = MathUtils.geometry.transform.scale(point, x[, y, origin]);
+const newPoint = MathUtils.geometry.transform.scale(point, vector[, origin]);
 ```
 
 
 ### Arguments
 
 * **`point`**: *`Point`* - point to scale
-* **`x`**: *`number`* - x coordinate scale factor
-* **`y`**?: *`number`* - y coordinate scale factor (def.: equal to "x")
+* **`vector`**: *`Vector`*  - vector coordinates scale factor
 * **`origin`**?: *`Point`* - scale origin (def.: (0,0))
 
 
@@ -32,9 +31,8 @@ Examples
 
 ```js
 // Multiply point x and y coordinates by 2.
-const newPoint = MathUtils.geometry.transform.scale(point, 2);
-const newPoint = MathUtils.geometry.transform.scale(point, 2, 2);
+const newPoint = MathUtils.geometry.transform.scale(point, { x: 2, y: 2 });
 
-// Scale coordinates from origin
-const newPoint = MathUtils.geometry.transform.scale(point, 2, 3, { x: 1, y: -2 });
+// Scale coordinates with custom origin.
+const newPoint = MathUtils.geometry.transform.scale(point, { x: 2, y: 3 }, { x: 1, y: -2 });
 ```

@@ -1,7 +1,13 @@
-export function isVector(p) {
+/**
+ * Method checks if the thing is vector.
+ * @method isVector
+ * @param {any} v - the thing to check
+ * @return {boolean} - true if the thing is vector
+ */
+export function isVector(v) {
 	return (
-		p instanceof Object &&
-		typeof p.x === 'number' &&
-		typeof p.y === 'number'
+		v instanceof Object &&
+		typeof v.x === 'number' &&
+		typeof v.y === 'number'
 	);
 }

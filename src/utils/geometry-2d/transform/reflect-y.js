@@ -4,7 +4,7 @@ import { ORIGIN_0x0 } from '../../constants.js';
 
 
 /**
- * Method reflects point x coordinate over origin point.
+ * Method reflects point y coordinate over origin point.
  * @method reflectY
  * @param {Point} point - point to reflect
  * @param {Point} origin - reflection origin
