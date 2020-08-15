@@ -3,12 +3,12 @@ import { versin } from '../../trigonometry/versin.js';
 
 /**
  * Method calculates sagitta from radius and angle.
- * @method asagitta
+ * @method sagittaFromAngle
  * @param {number} radius - circle radius
  * @param {number} theta - circle segment angle in radians
  * @return {number} - sagitta height
  */
-export function asagitta(radius, theta) {
+export function sagittaFromAngle(radius, theta) {
 	if (typeof radius !== 'number') {
 		throw new TypeError('"radius" is not a number');
 	}

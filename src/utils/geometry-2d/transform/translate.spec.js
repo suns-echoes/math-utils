@@ -1,9 +1,9 @@
 import { translate } from './translate.js';
 
 
-describe('Translate point', () => {
+describe('Translate point by vector', () => {
 	it('returns translated point', () => {
-		const p = translate({ x: -3, y: 5.5 }, 5, -7.5);
+		const p = translate({ x: -3, y: 5.5 }, { x: 5, y: -7.5 });
 
 		expect(p.x).to.equal(2);
 		expect(p.y).to.equal(-2);
@@ -11,23 +11,15 @@ describe('Translate point', () => {
 
 	it('throws if "point" has invalid type', () => {
 		function fail() {
-			translate(null, 1, 1);
+			translate(null, { x: 5, y: -7.5 });
 		}
 
 		expect(fail).to.throw(TypeError);
 	});
 
-	it('throws if "x" is invalid', () => {
+	it('throws if "vector" has invalid type', () => {
 		function fail() {
-			translate({ x: -3, y: 5.5 }, null, -7.5);
-		}
-
-		expect(fail).to.throw(TypeError);
-	});
-
-	it('throws if "y" is invalid', () => {
-		function fail() {
-			const p = translate({ x: -3, y: 5.5 }, 5, null);
+			translate({ x: -3, y: 5.5 }, null);
 		}
 
 		expect(fail).to.throw(TypeError);

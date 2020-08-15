@@ -1,22 +1,23 @@
-import { versin } from './versin.js';
+import { fixFloat } from '../tools/fix-float.js';
+import { sin } from './sin.js';
 
 
-describe('Versed sine', () => {
+describe('Sine', () => {
 	it('returns value for 0', () => {
-		const result = versin(0);
+		const result = sin(0);
 
 		expect(result).to.equal(0);
 	});
 
 	it('returns value for π', () => {
-		const result = versin(Math.PI);
+		const result = sin(Math.PI);
 
-		expect(result).to.equal(2);
+		expect(fixFloat(result)).to.equal(0);
 	});
 
 	it('throws if "theta" has invalid type', () => {
 		function fail() {
-			versin(null);
+			sin(null);
 		}
 
 		expect(fail).to.throw(TypeError);

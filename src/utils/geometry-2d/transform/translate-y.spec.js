@@ -11,4 +11,20 @@ describe('Translate point y coordinate', () => {
 		expect(p.x).to.equal(-3);
 		expect(p.y).to.equal(-2);
 	});
+
+	it('throws if "point" has invalid type', () => {
+		function fail() {
+			translateY(null, { x: 5, y: -7.5 });
+		}
+
+		expect(fail).to.throw(TypeError);
+	});
+
+	it('throws if "vector" has invalid type', () => {
+		function fail() {
+			translateY({ x: -3, y: 5.5 }, null);
+		}
+
+		expect(fail).to.throw(TypeError);
+	});
 });
