@@ -17,5 +17,8 @@ export function pointEqualPoint(pointA, pointB) {
 		throw new TypeError('"pointB is not a Point');
 	}
 
-	return pointA.x === pointB.x && pointA.y === pointB.y;
+	return (
+		pointA === pointB ||
+		pointA.x === pointB.x && pointA.y === pointB.y
+	);
 }

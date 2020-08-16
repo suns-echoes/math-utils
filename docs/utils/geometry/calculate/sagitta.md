@@ -29,6 +29,6 @@ Examples
 --------
 
 ```js
-// Calculate sagitta for circle radius 4 and segment width 1.256.
+// Calculate sagitta for circle radius 4 and segment width 1.256:
 const sagittaHeight = MathUtils.geometry.calculate.sagitta(4, 1.256);
 ```

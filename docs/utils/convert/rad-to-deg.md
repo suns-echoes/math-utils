@@ -1,5 +1,5 @@
-Radians to degrees
-==================
+Convert / Radians to degrees
+============================
 
 ### `radToDeg`
 
@@ -16,7 +16,7 @@ const degrees = MathUtils.convert.radToDeg(radians);
 
 ### Arguments
 
-* **`radians`**: *`number`* - angle in radians.
+* **`radians`**: *`number`* - angle in radians
 
 
 ### Returns
@@ -28,5 +28,6 @@ Examples
 --------
 
 ```js
+// Convert units:
 MathUtils.convert.radToDeg(Math.PI) === 180;
 ```

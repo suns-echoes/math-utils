@@ -30,6 +30,8 @@ Examples
 --------
 
 ```js
-// Fix number precision error.
-const angle = MathUtils.trigonometry.angleBetweenTreePoints({ x: 0, y: 0 }, { x: 1, y: 0 }, { x: 0, y: 1 });
+// Fix number precision error:
+const angle = MathUtils.trigonometry.angleBetweenTreePoints(
+	{ x: 0, y: 0 }, { x: 1, y: 0 }, { x: 0, y: 1 }
+);
 ```

@@ -27,35 +27,35 @@ describe('Constants: FIX_FLOAT', () => {
 		});
 	});
 
-	// it('throws if "number" has invalid type', () => {
-	// 	function fail() {
-	// 		setFixFloatPrecision(null);
-	// 	}
+	it('sets default precision - throws if "number" has invalid type', () => {
+		function fail() {
+			FIX_FLOAT.PRECISION = null;
+		}
 
-	// 	expect(fail).to.throw(TypeError);
-	// });
+		expect(fail).to.throw(TypeError);
+	});
 
-	// it('throws if "number" has invalid value (below 0)', () => {
-	// 	function fail() {
-	// 		setFixFloatPrecision(-1);
-	// 	}
+	it('sets default precision - throws if "number" has invalid value (below 0)', () => {
+		function fail() {
+			FIX_FLOAT.PRECISION = -1;
+		}
 
-	// 	expect(fail).to.throw(Error);
-	// });
+		expect(fail).to.throw(Error);
+	});
 
-	// it('throws if "number" has invalid value (above max)', () => {
-	// 	function fail() {
-	// 		setFixFloatPrecision(FIX_FLOAT.PRECISION.MAXIMUM + 1);
-	// 	}
+	it('sets default precision - throws if "number" has invalid value (above max)', () => {
+		function fail() {
+			FIX_FLOAT.PRECISION = FIX_FLOAT.PRECISION.MAXIMUM + 1;
+		}
 
-	// 	expect(fail).to.throw(Error);
-	// });
+		expect(fail).to.throw(Error);
+	});
 
-	// it('throws if "number" has invalid value (float)', () => {
-	// 	function fail() {
-	// 		setFixFloatPrecision(1.1);
-	// 	}
+	it('sets default precision - throws if "number" has invalid value (float)', () => {
+		function fail() {
+			FIX_FLOAT.PRECISION = 1.1;
+		}
 
-	// 	expect(fail).to.throw(Error);
-	// });
+		expect(fail).to.throw(Error);
+	});
 });

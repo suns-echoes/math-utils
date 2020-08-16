@@ -18,7 +18,7 @@ MathUtils.tools.setFixFloatPrecision(precision);
 
 ### Arguments
 
-* **`precision`**: *`number`* - decimal places, integer <0,FIX_FLOAT.PRECISION.MAXIMUM>
+* **`precision`**?: *`number`* - decimal places, integer <0,FIX_FLOAT.PRECISION.MAXIMUM>
 
 
 ### Returns
@@ -30,9 +30,9 @@ Examples
 --------
 
 ```js
-// Set default precision.
+// Set default precision:
 MathUtils.tools.setFixFloatPrecision();
 
-// Set 4 decimal places precision.
+// Set 4 decimal places precision:
 MathUtils.tools.setFixFloatPrecision(4);
 ```

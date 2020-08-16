@@ -29,9 +29,9 @@ Examples
 --------
 
 ```js
-// Calculate point distance from the origin of the coordinate system.
+// Calculate point distance from the origin of the coordinate system:
 const l = MathUtils.geometry.calculate.distance(point);
 
-// Calculate point distance from another point (custom origin).
+// Calculate point distance from another point (custom origin):
 const l = MathUtils.geometry.calculate.distance(point, { x: 4, y: 6 });
 ```

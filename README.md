@@ -54,24 +54,23 @@ Geometry functions
 
 1. Calculation
 
-* [distance](./docs/utils/geometry/calculation/distance.md)
-* [sagitta](./docs/utils/geometry/calculation/sagitta.md)
-* [sagitta from angle](./docs/utils/geometry/calculation/sagitta-from-angle.md)
+* [distance](./docs/utils/geometry/calculate/distance.md)
+* [sagitta](./docs/utils/geometry/calculate/sagitta.md)
+* [sagitta from angle](./docs/utils/geometry/calculate/sagitta-from-angle.md)
 
 2. Transformation
 
-* [reflect](./docs/utils/geometry/transformation/reflect.md)
-* [reflect over line](./docs/utils/geometry/transformation/reflect-over-line.md)
-* [reflect x](./docs/utils/geometry/transformation/reflect-x.md)
-* [reflect y](./docs/utils/geometry/transformation/reflect-y.md)
-* [rotate](./docs/utils/geometry/transformation/rotate.md)
-* [rotate around origin](./docs/utils/geometry/transformation/rotate-around-origin.md)
-* [scale](./docs/utils/geometry/transformation/scale.md)
-* [scale x](./docs/utils/geometry/transformation/scale-x.md)
-* [scale y](./docs/utils/geometry/transformation/scale-y.md)
-* [translate](./docs/utils/geometry/transformation/translate.md)
-* [translate x](./docs/utils/geometry/transformation/translate-x.md)
-* [translate y](./docs/utils/geometry/transformation/translate-y.md)
+* [reflect](./docs/utils/geometry/transform/reflect.md)
+* [reflect over line](./docs/utils/geometry/transform/reflect-over-line.md)
+* [reflect x](./docs/utils/geometry/transform/reflect-x.md)
+* [reflect y](./docs/utils/geometry/transform/reflect-y.md)
+* [rotate](./docs/utils/geometry/transform/rotate.md)
+* [scale](./docs/utils/geometry/transform/scale.md)
+* [scale x](./docs/utils/geometry/transform/scale-x.md)
+* [scale y](./docs/utils/geometry/transform/scale-y.md)
+* [translate](./docs/utils/geometry/transform/translate.md)
+* [translate x](./docs/utils/geometry/transform/translate-x.md)
+* [translate y](./docs/utils/geometry/transform/translate-y.md)
 
 Trigonometry functions
 ----------------------
@@ -85,7 +84,7 @@ Trigonometry functions
 
 Tools
 -----
-* [fix float (precision/rounding)](./docs/utils/tools/fix-float.md)
+* [fix float (rounding precision)](./docs/utils/tools/fix-float.md)
 * [set fix float precision](./docs/utils/tools/set-fix-float-precision.md)
 
 

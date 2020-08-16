@@ -24,10 +24,9 @@ async function findEntries() {
 
 			keys.forEach((key) => {
 				if (typeof module[key] !== undefined) {
-					entries.push(key);
-				}
-				else if (key !== 'default') {
-					throw new Error(`"${entity}" module exports entity "${key}" that is undefined`);
+					if (key !== 'default' || module[key] !== module.default) {
+						entries.push(key);
+					}
 				}
 			});
 		}

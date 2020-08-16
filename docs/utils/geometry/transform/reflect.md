@@ -29,9 +29,9 @@ Examples
 --------
 
 ```js
-// Reflect point over default origin (0,0).
+// Reflect point over default origin (0,0):
 const newPoint = MathUtils.geometry.transform.reflect(point);
 
-// Reflect point over origin point (1,3).
+// Reflect point over origin point (1,3):
 const newPoint = MathUtils.geometry.transform.reflect(point, { x: 1, y: 3 });
 ```

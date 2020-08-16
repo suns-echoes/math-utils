@@ -30,9 +30,11 @@ Examples
 --------
 
 ```js
-// Multiply point x coordinate by 2.
+// Multiply point x coordinate by 2:
 const newPoint = MathUtils.geometry.transform.scaleX(point, { x: 2, y: 2 });
 
-// Scale coordinate from origin
-const newPoint = MathUtils.geometry.transform.scaleX(point, { x: 2, y: 3 }, { x: 1, y: -2 });
+// Scale coordinate from origin:
+const newPoint = MathUtils.geometry.transform.scaleX(
+	point, { x: 2, y: 3 }, { x: 1, y: -2 }
+);
 ```

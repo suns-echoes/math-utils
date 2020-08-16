@@ -3,7 +3,7 @@ Tools / Fix float
 
 ### `fixFloat`
 
-Method fixes float precision error.
+Method fixes float rounding precision error.
 
 *Note: to change precision use [setFixFloatPrecision](./set-fix-float-precision.md) method.*
 
@@ -30,6 +30,6 @@ Examples
 --------
 
 ```js
-// Fix number precision error.
+// Fix number precision error:
 const fixedNumber = MathUtils.tools.fixFloat(number);
 ```

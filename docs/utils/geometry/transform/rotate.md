@@ -31,12 +31,16 @@ Examples
 --------
 
 ```js
-// Rotate point by theta angle (in radians) around origin (0,0) clockwise.
+// Rotate point by theta angle (in radians) around origin (0,0) clockwise:
 const newPoint = MathUtils.geometry.transform.rotate(point, 1.256);
 
-// Rotate point around custom origin.
-const newPoint = MathUtils.geometry.transform.rotate(point, 2.4, { x: 1, y: 3 });
+// Rotate point around custom origin:
+const newPoint = MathUtils.geometry.transform.rotate(
+	point, 2.4, { x: 1, y: 3 }
+);
 
-// Rotate point counter clockwise.
-const newPoint = MathUtils.geometry.transform.rotate(point, 0.23, undefined, false);
+// Rotate point counter clockwise:
+const newPoint = MathUtils.geometry.transform.rotate(
+	point, 0.23, undefined, false
+);
 ```

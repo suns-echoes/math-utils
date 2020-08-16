@@ -29,6 +29,6 @@ Examples
 --------
 
 ```js
-// Translate point by (2,3) vector.
+// Translate point by (2,3) vector:
 const newPoint = MathUtils.geometry.transform.translate(point, { x: 2, y: 3 });
 ```

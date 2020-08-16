@@ -29,6 +29,6 @@ Examples
 --------
 
 ```js
-// Calculate sagitta for circle radius 4 and segment angle 2.12 rad.
+// Calculate sagitta for circle radius 4 and segment angle 2.12 rad:
 const sagittaHeight = MathUtils.geometry.calculate.sagittaFromAngle(4, 2.12);
 ```

@@ -30,10 +30,8 @@ Examples
 --------
 
 ```js
-// Reflect point over line plotted by (1,3) and (2,-2) points.
+// Reflect point over line plotted by (1,3) and (2,-2) points:
 const newPoint = MathUtils.geometry.transform.reflectOverLine(
-	point,
-	{ x: 1, y: 3 },
-	{ x: 2, y: -2 }
+	point, { x: 1, y: 3 }, { x: 2, y: -2 }
 );
 ```
