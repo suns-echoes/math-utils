@@ -1,6 +1,6 @@
 {
   "name": "@suns-echoes/math-utils",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Math Utilities Library",
   "scripts": {
     "coverage": "cross-env NODE_ENV=test nyc mocha --config .mocharc.src.json",
@@ -9,7 +9,8 @@
     "test:watch": "cross-env NODE_ENV=test mocha --watch",
     "lint": "eslint .",
     "dist": "node -r esm scripts/dist",
-    "release": "npm run dist && cd dist && npm publish"
+    "release": "npm run dist && cd dist && npm login && npm publish --access public && npm logout",
+    "release:priv": "npm run dist && cd dist && npm login && npm publish --access restricted && npm logout"
   },
   "homepage": "https://github.com/suns-echoes/math-utils",
   "repository": {
@@ -27,7 +28,7 @@
     "@istanbuljs/nyc-config-babel": "^2.1.1",
     "@suns-echoes/exec": "^0.2.0",
     "@suns-echoes/file-system-utils": "^0.9.0",
-    "@suns-echoes/transform-esm-into-cjs": "^0.1.1",
+    "@suns-echoes/transform-esm-into-cjs": "^0.1.2",
     "babel-eslint": "^10.1.0",
     "babel-plugin-istanbul": "^5.2.0",
     "chai": "^4.2.0",

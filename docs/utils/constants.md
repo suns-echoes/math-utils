@@ -7,7 +7,7 @@ Library constants.
 Items
 -----
 
-### Origin of the coordinate system.
+### Origin of the coordinate system
 
 ```js
 ORIGIN_0x0 = {
@@ -17,7 +17,7 @@ ORIGIN_0x0 = {
 ```
 
 
-### Default and maximum precision of fixFloat method.
+### Default and maximum precision of fixFloat method
 
 ```js
 FIX_FLOAT = {
